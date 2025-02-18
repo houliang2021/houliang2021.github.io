@@ -1,7 +1,135 @@
-<p>Hello 大家好</p>
-<p>我是霜雪拾肆，这是我的个人网站。 </p>
-<p>很高兴你来到这里, 你可以在以下的网站找到我</p>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>霜雪拾肆的个人网站</title>
+    <style>
+        /* 基础样式 */
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 2rem;
+            min-height: 100vh;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            color: #fff;
+        }
 
-<ul>
-  <li> <a href="https://www.zhihu.com/people/ling-ang-93">知乎</a> </li>
-</ul>
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        /* 文字动画 */
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 1em;
+            transform: translateY(30px);
+            opacity: 0;
+            animation: slideUp 0.8s ease forwards 0.3s;
+        }
+
+        p {
+            transform: translateY(30px);
+            opacity: 0;
+            animation: slideUp 0.8s ease forwards 0.5s;
+            margin-bottom: 1.2em;
+        }
+
+        /* 链接列表动画 */
+        ul {
+            list-style: none;
+            padding: 0;
+            transform: translateY(30px);
+            opacity: 0;
+            animation: slideUp 0.8s ease forwards 0.7s;
+        }
+
+        li {
+            margin: 1em 0;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* 动画定义 */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+            h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>大家好，我是霜雪拾肆 ❄️</h1>
+        
+        <p>欢迎来到我的个人小站！这里是我分享技术思考和生活感悟的地方。</p>
+        
+        <p>🎉 很高兴遇见你！可以通过以下方式找到我：</p>
+
+        <ul>
+            <li>
+                <a href="https://www.zhihu.com/people/ling-ang-93" 
+                   target="_blank" 
+                   rel="noopener noreferrer">
+                    📚 知乎主页
+                </a>
+            </li>
+            <!-- 可以继续添加其他链接 -->
+        </ul>
+    </div>
+</body>
+</html>
